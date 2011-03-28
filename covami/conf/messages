@@ -1,0 +1,15 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+
+# Formulaire de connexion
+secure.username=Pseudonyme :
+secure.password=Mot de passe :
+secure.signin=Connexion
+secure.error=Nom d'utilisateur ou mot de passe inconnu.
+
+# Formulaire CRUD Utilisateur
+login=Pseudonyme
+password=Mot de passe
+fullname=Nom complet
+crudListAdd=Ajouter

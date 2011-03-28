@@ -1,0 +1,16 @@
+# you describe your data using the YAML notation here
+
+Utilisateur(philippe):
+  login: pchauvelin
+  password: azerty
+  fullname: Philippe Chauvelin
+
+Utilisateur(melina):
+  login: mfontaine
+  password: azerty
+  fullname: Mélina Fontaine
+
+Utilisateur(gauderic):
+  login: gpledran
+  password: azerty
+  fullname: Gaudéric Pledran
