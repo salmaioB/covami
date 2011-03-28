@@ -12,4 +12,5 @@ secure.error=Nom d'utilisateur ou mot de passe inconnu.
 login=Pseudonyme
 password=Mot de passe
 fullname=Nom complet
-crudListAdd=Ajouter
+add=Ajouter
+crud.crudListSearch=Rechercher

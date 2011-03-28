@@ -350,11 +350,11 @@ form label {
 /** Footer **/
 
 #footer {
-    border-top: 1px solid #93A045;
+    border-top: 1px solid #777;
     font-size: 70%;
     padding: 10px 30px;
     text-align: center;
-    color: #869AB1;
+    color: #777;
     margin-top: 30px;
 }
 
@@ -384,14 +384,14 @@ form label {
     color: #fff;
     text-decoration: none;
     font-size: 80%;
-    background: #591C64;
+    background: #444;
     padding: 2px 10px;
     -webkit-border-radius: 9px;
     -moz-border-radius: 9px;
 }
 
 #adminMenu li.selected a {
-    background: #82A346;
+    background: #777;
 }
 
 #crudContent {
@@ -399,11 +399,11 @@ form label {
 }
 
 #crudContent h2 {
-    color: #EDC3CD !important;
+    color: #444 !important;
 }
 
 #crudContent thead tr {
-    background: #512162 !important;
+    background: #444 !important;
 }
 
 #crudContent table {
@@ -415,7 +415,7 @@ form label {
 }
 
 tr.odd {
-    background: #BECCE7 !important;
+    background: #CCC !important;
 }
 
 #crud #crudContent, #crudContent form, #crudListSearch, #crudListPagination, .crudButtons {
@@ -434,7 +434,7 @@ tr.odd {
 }
 
 .crudField label {
-    color: #B8FA5C;
+    color: #777;
 }
 
 .crudHelp {
