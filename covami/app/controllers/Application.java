@@ -18,7 +18,7 @@ public class Application extends Controller {
 	@Before
     static void setConnectedUser(){
          if(Security.isConnected()){
-             Utilisateur user = Utilisateur.find("byLogin",Security.connected()).first();
+             Utilisateur user = Utilisateur.find("byEmail",Security.connected()).first();
              renderArgs.put("user", user);
              renderArgs.put("security",Security.connected());
              //flash.success("Connexion réussie");
@@ -27,6 +27,15 @@ public class Application extends Controller {
 
     public static void index() {
         render();
+    }
+    
+    public static void moncompte() {
+    	if(Security.isConnected()) {
+    		Utilisateur user = Utilisateur.find("byEmail", Security.connected()).first();
+    		renderArgs.put("user", user);
+    		renderArgs.put("security",Security.connected());
+    	}
+    	render();
     }
 
 }

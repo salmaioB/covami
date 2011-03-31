@@ -4,8 +4,8 @@ import models.*;
  
 public class Security extends Secure.Security {
  
-	static boolean authentify(String username, String password) {
-	    return Utilisateur.connect(username, password) != null;
+	static boolean authentify(String email, String password) {
+	    return Utilisateur.connect(email, password) != null;
 	}
 	
 	static void onDisconnected() {
