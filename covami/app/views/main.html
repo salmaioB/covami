@@ -20,7 +20,7 @@
 	            <li>
 					#{if security != null}
 						<a href="@{Admin.index()}">Administration</a>&nbsp;&nbsp;&nbsp;
-						<a href="@{Secure.logout()}">Déconnexion [${user.login}]</a>
+						<a href="@{Secure.logout()}">Déconnexion [${user.email}]</a>
 					#{/if}
 					<!-- Sinon on propose de se logger -->
 					#{else}
@@ -31,7 +31,11 @@
             </ul>
             <div id="title">
                 <span class="about">About this blog</span>
-                <h2>${covamiBaseline}</h2>
+                 <ul id="adminMenu">
+		            <li class="${request.controller == 'Utilisateurs' ? 'selected' : ''}">
+		                <a href="@{Application.moncompte()}">Mon compte</a>
+		    	</ul>
+		    	<h2>${covamiBaseline}</h2>
             </div>
         </div>
         

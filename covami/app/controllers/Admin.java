@@ -13,7 +13,7 @@ public class Admin extends Controller {
     @Before
     static void setConnectedUser() {
         if(Security.isConnected()) {
-            Utilisateur user = Utilisateur.find("byLogin", Security.connected()).first();
+            Utilisateur user = Utilisateur.find("byEmail", Security.connected()).first();
             renderArgs.put("user", user);
         }
     }

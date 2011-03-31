@@ -31,6 +31,8 @@
 	        #{secure.check 'admin'}
 	            <li class="${request.controller == 'Utilisateurs' ? 'selected' : ''}">
 	                <a href="@{Utilisateurs.list()}">Utilisateurs</a>
+	            <li class="${request.controller == 'Voitures' ? 'selected' : ''}">
+	                <a href="@{Voitures.list()}">Voitures</a>
 	        #{/secure.check}
 	    	</ul>
             #{doLayout /} 

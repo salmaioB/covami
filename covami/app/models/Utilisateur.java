@@ -9,25 +9,60 @@ import play.data.validation.*;
 @Entity
 public class Utilisateur extends Model{
 	@Required
-	public String login;
+	public String email;
 	
 	@Required
     public String password;
 	
 	@Required
-	public String fullname;
+	public String nom;
+	
+	@Required
+	public String prenom;
+	
+	public String telephoneMobile;
+	
+	public String telephonePerso;
+	
+	@Required
+	public Date dateNaissance;
+	
+	@Required
+	public String rue;
+	
+	@Required
+	public String cp;
+	
+	@Required
+	public String ville;
+	
+	@Required
+	public String pays;
+	
+	@OneToOne
+	public Voiture maVoiture;
     
-    public Utilisateur(String login, String password, String fullname) {
-        this.login = login;
+    public Utilisateur(String email, String password, String nom, String prenom, String telephoneMobile, String telephonePerso, Date dateNaissance, String rue, String cp, String ville, String pays, Voiture maVoiture) {
+        this.email = email;
         this.password = password;
-        this.fullname = fullname;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.telephoneMobile = telephoneMobile;
+        this.telephonePerso = telephonePerso;
+        this.dateNaissance = dateNaissance;
+        this.rue = rue;
+        this.cp = cp;
+        this.ville = ville;
+        this.pays = pays;
+        this.maVoiture = maVoiture;
     }
     
-    public static Utilisateur connect(String login, String password) {
-    	return find("byLoginAndPassword", login, password).first();
+    public static Utilisateur connect(String email, String password) {
+    	return find("byEmailAndPassword", email, password).first();
     }
     
     public String toString() {
-        return fullname;
+        return this.prenom + " " + this.nom;
     }
+    
 }
