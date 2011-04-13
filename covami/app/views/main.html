@@ -24,17 +24,21 @@
 					#{/if}
 					<!-- Sinon on propose de se logger -->
 					#{else}
-						<a href="@{Secure.login()}">Connexion</a>
+						<a href="@{Secure.login()}">Connexion</a>&nbsp;&nbsp;&nbsp;
+						<a href="@{Application.inscription()}">S'inscrire</a>
 					#{/else}
                 </li>
                 
             </ul>
             <div id="title">
                 <span class="about">About this blog</span>
-                 <ul id="adminMenu">
-		            <li class="${request.controller == 'Utilisateurs' ? 'selected' : ''}">
-		                <a href="@{Application.moncompte()}">Mon compte</a>
-		    	</ul>
+                 	<ul id="adminMenu">
+                 	#{if security != null}
+		            	<li class="${request.controller == 'Utilisateurs' ? 'selected' : ''}">
+		                	<a href="@{Application.moncompte()}">Mon compte</a>
+		                </li>
+		         	#{/if}
+		    		</ul>
 		    	<h2>${covamiBaseline}</h2>
             </div>
         </div>
