@@ -21,7 +21,7 @@ public class Application extends Controller {
              Utilisateur user = Utilisateur.find("byEmail",Security.connected()).first();
              renderArgs.put("user", user);
              renderArgs.put("security",Security.connected());
-             //flash.success("Connexion réussie");
+             flash.success("Connexion réussie");
          }
      }
 
@@ -36,6 +36,39 @@ public class Application extends Controller {
     		renderArgs.put("security",Security.connected());
     	}
     	render();
+    }
+    
+    public static void editermoncompte() {
+    	if(Security.isConnected()) {
+    		Utilisateur user = Utilisateur.find("byEmail", Security.connected()).first();
+    		//renderArgs.put("user", user);
+    		renderArgs.put("security",Security.connected());
+    		render(user);
+    	}
+    	render();
+    }
+    
+    public static void sauvegardermoncompte(Utilisateur user) {
+    	//user.save();
+    	flash.success("Sauvegarde réussie");
+    	moncompte();
+    }
+    
+    public static void inscription() {
+    	if(Security.isConnected()) {
+    		renderArgs.put("security",Security.connected());
+    		index();
+    	}
+    	render();
+    }
+    
+    public static void enregistrerinscription(Utilisateur user) {
+    	user.save();
+    	flash.success("Inscription réussie");
+    	renderArgs.put("user", user);
+    	renderArgs.put("security",Security.connected());
+    	Utilisateur.connect(user.email, user.password);
+    	index();
     }
 
 }

@@ -3,6 +3,12 @@
 
 <h1>Mon compte</h1>
 
+#{if flash.success}
+    <p>
+        ${flash.success}
+    </p>
+#{/if}
+
 <table>
   <tr>
     <td>E-mail</td>
@@ -49,3 +55,5 @@
     <td>${user.pays}</td>
   </tr>
 </table>
+
+<a href="@{Application.editermoncompte()}">Editer</a>

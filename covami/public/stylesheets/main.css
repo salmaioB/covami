@@ -262,8 +262,8 @@ h3 span {
 
 form {
     padding: 10px;
-    background: #253142;
-    background: -webkit-gradient(linear, left top, left 60%, from(#253142), to(#364B66));
+    background: #eee;
+    /*background: -webkit-gradient(linear, left top, left 60%, from(#253142), to(#364B66));*/
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
 }
@@ -289,13 +289,14 @@ form textarea {
 
 form input, form textarea {
     font-size: 14px;
+	margin-left: 10px;
 }
 
 form label {
     display: block;
     font-weight: bold;
     font-size: 90%;
-    color: #aaa;
+    color: #111;
     margin-bottom: 3px;
 }
 
